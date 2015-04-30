@@ -1,0 +1,360 @@
+/*
+Style Guide for the WATG internal sites
+*/
+ 
+/*
+Colors
+Red - #B01410
+Dark Grey - #55565A
+Med Grey - #777777
+Light Grey - #C8CBCB
+*/
+ 
+body {
+    font-family: Helvetica, Arial, sans-serif !important;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+h1 {
+    font-weight: bold;
+    font-size: 32px;
+}
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+}
+h3 {
+    font-weight: bold;
+	font-size: 18px;
+}
+hr {
+	margin: 40px 0;
+	border-top: 1px solid #ccc;
+}
+ 
+.navbar {
+	/*background: #55565A;*/
+	background: #b5171b!important; /* Old browsers */
+	background: -moz-linear-gradient(left, #b5171b 0%, #e38530 100%)!important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#b5171b), color-stop(100%,#e38530))!important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, #b5171b 0%,#e38530 100%)!important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, #b5171b 0%,#e38530 100%)!important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, #b5171b 0%,#e38530 100%)!important; /* IE10+ */
+	background: linear-gradient(to right, #b5171b 0%,#e38530 100%)!important; /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b5171b', endColorstr='#e38530',GradientType=1 )!important; /* IE6-9 */
+}
+.navbar-container {
+	padding: 0;
+	display: inline-block;
+	width: 100%;
+	margin-top: 4px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #313140; /* Old browsers */
+	background: -moz-linear-gradient(top, #313140 0%, #55565a 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#313140), color-stop(100%,#55565a)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #313140 0%,#55565a 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #313140 0%,#55565a 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #313140 0%,#55565a 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #313140 0%,#55565a 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#313140', endColorstr='#55565a',GradientType=0 ); /* IE6-9 */
+	z-index: 1;
+}
+.navbar .navbar-brand {
+	font-size: 0px;
+	background: url(logo-w.png) no-repeat 50% 50%;
+	background-size: 30px;
+	padding: 12px 36px;
+	margin-top: 9px;
+	margin-left: 0px !important;
+	border-right: 1px solid #ccc;
+	vertical-align: middle;
+}
+.navbar .navbar-nav>li>a {
+	color: #CCC;
+	font-size: 14px;
+}
+.navbar .navbar-nav>li>a:hover {
+	color: #CCC !important;
+	background: #333333 !important;
+}
+.navbar-nav li a.project-title,
+.navbar-nav li a.project-title:hover {
+	background: #55565A url(active-menu-item-arrow.png) no-repeat 50% 100% !important;
+	font-weight: bold;
+	color: #FFF;
+}
+ 
+.navbar .navbar-nav>li:first-child {
+	border-left: none;
+}
+ 
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse,
+.navbar-static-top .navbar-collapse {
+	padding-right: 0;              
+}
+.ace-nav>li.light-blue>a {
+	background: transparent;
+}
+.ace-nav>li.light-blue>a:focus,
+.ace-nav>li.light-blue>a:hover,
+.ace-nav>li.open.light-blue>a {
+	background-color: transparent;
+}
+.user-info {
+	font-weight: bold;
+}
+.user-info small {
+	font-weight: normal;
+}
+ 
+.body-content {
+	background: #FFF;
+}
+
+.wizard-steps li:before,
+.wizard-steps li .step {
+	border-color: #DDD;
+}
+.wizard-steps li.active .step,
+.wizard-steps li.active:before,
+.wizard-steps li.complete .step,
+.wizard-steps li.complete:before,
+.wizard-steps li.complete:hover:before {
+	border-color: #B01410;
+}
+
+input[type=color], 
+input[type=date], 
+input[type=datetime-local], 
+input[type=datetime], 
+input[type=email], 
+input[type=month], 
+input[type=number], 
+input[type=password], 
+input[type=search], 
+input[type=tel], 
+input[type=text], 
+input[type=time], 
+input[type=url], 
+input[type=week], 
+textarea {
+	border-radius: 5px !important;
+	font-weight: normal;
+}
+ 
+.btn {
+  border: 0;
+  border-radius: 5px;
+}
+ 
+/* gray button */
+.btn-default.disabled,
+.btn-default.disabled.active,
+.btn-default.disabled:active,
+.btn-default.disabled:focus,
+.btn-default.disabled:hover,
+.btn-default[disabled],
+.btn-default[disabled].active,
+.btn-default[disabled]:active,
+.btn-default[disabled]:focus,
+.btn-default[disabled]:hover,
+.btn.disabled,
+.btn.disabled.active,
+.btn.disabled:active,
+.btn.disabled:focus,
+.btn.disabled:hover,
+.btn[disabled],
+.btn[disabled].active,
+.btn[disabled]:active,
+.btn[disabled]:focus,
+.btn[disabled]:hover,
+fieldset[disabled] .btn,
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-default.active,
+fieldset[disabled] .btn-default:active,
+fieldset[disabled] .btn-default:focus,
+fieldset[disabled] .btn-default:hover,
+fieldset[disabled] .btn.active,
+fieldset[disabled] .btn:active,
+fieldset[disabled] .btn:focus,
+fieldset[disabled] .btn:hover,
+.btn,
+.btn-default,
+.btn-default:focus,
+.btn:focus {
+	background: #C9CBCB !important;
+}
+ 
+/* blue button */
+.btn-primary,
+.btn-primary:focus
+{
+	background-color: #156494 !important;
+}
+.btn-primary:active,
+.btn-primary:hover,
+.open .btn-primary.dropdown-toggle {
+	background-color: #10527A !important;
+}
+ 
+/* aqua button */
+.btn-info,
+.btn-info:focus {
+	background-color: #74CBC7 !important;
+}
+.btn-info:active,
+.btn-info:hover,
+.open .btn-info.dropdown-toggle {
+	background-color: #62AEAA !important;
+}
+ 
+/* green button */
+.btn-success,
+.btn-success:focus {
+	background-color: #65B756 !important;
+}
+.btn-success:active,
+.btn-success:hover,
+.open .btn-success.dropdown-toggle {
+	background-color: #4F8E43 !important;
+}
+ 
+/* red button */
+.btn-warning,
+.btn-warning:focus,
+.btn-danger,
+.btn-danger:focus
+{
+	background-color: #B01410 !important;
+}
+.btn-warning:active,
+.btn-warning:hover,
+.open .btn-warning.dropdown-toggle,
+.btn-danger:active,
+.btn-danger:hover,
+.open .btn-danger.dropdown-toggle {
+	background-color: #8D0F0C !important;
+}
+ 
+ 
+ 
+.footer .footer-inner .footer-content {
+	background: #C8CBCB;
+	border: none;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #FFF;
+}
+ 
+#step-container {
+	padding: 40px 0 10px;
+}
+.form-group {
+	margin-bottom: 25px;
+}
+ 
+.label {
+	border-radius: 5px;
+	padding: 4px 8px;
+	margin-bottom: 2px;
+}
+.label-danger {
+	background-color: #B01410 !important;
+}
+label.control-label {
+	font-weight: bold;
+}
+ 
+.col-md-10 {
+	font-size: 14px;
+	padding-top: 4px;
+}
+ 
+/* Table */
+.table>thead>tr {
+	background: #535362;
+	color: #FFF;
+}
+.table>thead>tr a {
+	color: #FFF;
+}
+.table>thead>tr>th {
+	font-weight: 400;
+	border: none;
+}
+ 
+ 
+@media (max-width: 767px) {
+	.navbar .navbar-brand {
+		border: none;
+	}
+	.navbar .navbar-nav {
+		margin: 0;
+	}
+	.navbar-right {
+		padding: 4px;
+	}
+	.navbar .navbar-nav>li,
+	.navbar .navbar-nav>li:first-child {
+		border-width: 0;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		padding: 0;
+	}
+	.navbar-nav li a.project-title, .navbar-nav li a.project-title,
+	.navbar-nav li a.project-title, .navbar-nav li a.project-title:hover {
+		background-image: none !important;
+	}
+	.navbar:not(.navbar-collapse) .ace-nav {
+		background: none;
+		border: none;
+	}
+	.navbar:not(.navbar-collapse) .ace-nav>li:last-child {
+		border: none;
+		width: 100%;
+	}
+	.form-horizontal .form-group.two-col {
+		margin-right: 3%;
+		width: 48%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+ 
+@media only screen and (max-width: 479px) {
+	.container {
+		padding: 0;
+	}
+	.navbar-fixed-top+.main-container {
+		padding-top: 50px;
+	}
+	.navbar-fixed-top .navbar-collapse {
+		padding: 0;
+	}
+	.navbar-nav li a.project-title, .navbar-nav li a.project-title,
+	.navbar-nav li a.project-title, .navbar-nav li a.project-title:hover {
+		background-image: none !important;
+	}
+	.navbar:not(.navbar-collapse) .ace-nav {
+		background: none;
+		border: none;
+	}
+	.navbar:not(.navbar-collapse) .ace-nav>li:last-child {
+		border: none;
+		width: 100%;
+	}
+	.form-horizontal .form-group.two-col {
+		margin-right: inherit;
+		width: 100%;
+		display: block;
+	}
+}

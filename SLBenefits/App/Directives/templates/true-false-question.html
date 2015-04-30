@@ -1,0 +1,44 @@
+﻿<div data-ng-repeat="questionPostModel in directiveQuestionsPostModel track by $index">
+    <div class="row">
+        <div class="col-md-1">
+            <b>{{$index + 1}}.</b>
+        </div>
+        <div class="pull-left col-md-11">
+            {{questionPostModel.questionString}}
+        </div>
+    </div>
+    <div class="row" data-ng-if="questionPostModel.questionType == 0">
+        <div class="col-md-10" data-ng-if="questionPostModel.answerOption == 0">
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="trueFalseOption" value="0">
+                        True
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="trueFalseOption" value="1">
+                        False
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-10" data-ng-if="questionPostModel.answerOption == 1">
+            <div class="form-group">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="trueFalseOption" value="0" />
+                        Yes
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="trueFalseOption" value="1" />
+                        No
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
