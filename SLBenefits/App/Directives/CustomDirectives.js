@@ -1,6 +1,6 @@
-﻿var surveyTakerDirectives = angular.module('SLBenefitsAppDirectives', []);
+﻿var SLBenefitsAppDirectives = angular.module('SLBenefitsAppDirectives', []);
 
-surveyTakerDirectives.directive("loader", function ($rootScope) {
+SLBenefitsAppDirectives.directive("loader", function ($rootScope) {
     return function ($scope, element, attrs) {
         $scope.$on("loader_show", function () {
             return element.show();
@@ -11,7 +11,7 @@ surveyTakerDirectives.directive("loader", function ($rootScope) {
     };
 });
 
-surveyTakerDirectives.directive('myCustomer', function () {
+SLBenefitsAppDirectives.directive('myCustomer', function () {
     return {
         restrict: 'E',
         scope: {
@@ -21,7 +21,7 @@ surveyTakerDirectives.directive('myCustomer', function () {
     };
 });
 
-surveyTakerDirectives.directive('trueFalseQuestion', function () {
+SLBenefitsAppDirectives.directive('trueFalseQuestion', function () {
     return {
         restrict: 'E',
          scope: {

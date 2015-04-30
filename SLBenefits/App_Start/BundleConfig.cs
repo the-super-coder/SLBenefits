@@ -34,9 +34,10 @@ namespace SLBenefits.App_Start
             bundles.Add(new ScriptBundle("~/bundles/app")
                     .Include("~/App/App.js")
                     //Controllers
-                    .Include("~/App/Controllers/DashboardController.js")
+                    .Include("~/App/Controllers/dashboardController.js")
+                    .Include("~/App/Controllers/categoryController.js")
                     //Directives
-                    .Include("~/App/Directives/CustomDirectives.js")
+                    .Include("~/App/Directives/customDirectives.js")
                     
               );
 

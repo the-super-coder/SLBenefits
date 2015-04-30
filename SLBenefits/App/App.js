@@ -33,16 +33,20 @@
 
                 $routeProvider.
                     when('/', {
-                        templateUrl: 'App/Views/dashboard.html',
-                        controller: 'DashboardController'
+                        templateUrl: 'app/views/dashboard.html',
+                        controller: 'dashboardController'
                     })
                     .when('/slbenefits', {
-                        templateUrl: 'App/Views/dashboard.html',
-                        controller: 'DashboardController'
+                        templateUrl: 'app/views/dashboard.html',
+                        controller: 'dashboardController'
+                    })
+                     .when('/category/create', {
+                         templateUrl: 'App/Views/category.html',
+                         controller: 'categoryController'
+                     })
+                    .otherwise({
+                        redirectTo: '/'
                     });
-                //.otherwise({
-                //    redirectTo: '/'
-                //});
                 //  $locationProvider.html5Mode(false).hashPrefix('!');
             }]);
 

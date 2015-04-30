@@ -1,0 +1,43 @@
+﻿<!--title-->
+<div class="row">
+    <div class="col-md-12 nopadding">
+        <h4 class="nopadding">{{title}}</h4>
+    </div>
+</div>
+
+<!--add category-->
+<div class="row mt20">
+    <div class="col-md-12 text-right">
+        <input type="button" class="btn btn-default btn-primary" value="save" data-ng-click="save()" />
+    </div>
+</div>
+
+<div class="row mt20">
+    <div class="form-group">
+        <label>Category Name:</label>
+        <input type="text" class="form-control"  data-ng-model="postModel.name" />
+    </div>
+</div>
+
+<!--category list-->
+<div class="row mt20">
+    <div class="col-md-12">
+        <table class="table table-condensed table-striped table-bordered table-responsive table-hover" data-ng-if="categoryList.length > 0">
+        <thead>
+            <tr>
+                <th class="col-md-6 col-sm-6 col-xs-6">Name</th>
+                <th class="col-md-2 col-sm-4 col-xs-4">Creation Date</th>
+             
+            </tr>
+        </thead>
+        <tbody>
+            <tr data-ng-repeat="category in categoryList">
+                <td>
+                    <a class="wtag-color">{{category.name}}</a>
+                </td>
+                <td>{{category.creationDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+</div>

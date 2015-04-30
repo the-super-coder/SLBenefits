@@ -11,6 +11,10 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+.content-height
+{
+    height: 475px !important;
+}
 /* styles for validation helpers */
 .field-validation-error
 {

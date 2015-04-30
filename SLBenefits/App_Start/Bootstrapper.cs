@@ -7,6 +7,7 @@ using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
 using SLBenefits.Core;
 using SLBenefits.Core.Helper;
+using SLBenefits.Core.Service;
 
 namespace SLBenefits.App_Start
 {
@@ -41,17 +42,19 @@ namespace SLBenefits.App_Start
 
             builder.RegisterType<UnitOfWork>().As<IUnitOfWork>().InstancePerRequest();
 
+            builder.RegisterGeneric(typeof(Repository<>)).As(typeof(IRepository<>)).InstancePerRequest();
+
+
+            builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerRequest();
             builder.RegisterType<ConfigurationHelper>().As<IConfigurationHelper>().InstancePerRequest();
 
-            builder.RegisterGeneric(typeof(Repository<>))
-                   .As(typeof(IRepository<>)).InstancePerRequest();
 
             //Service
-            //builder.RegisterAssemblyTypes(typeof(QuestionService).Assembly)
-            //       .Where(t => t.Name.EndsWith("Service"))
-            //       .AsImplementedInterfaces().InstancePerRequest();
+            builder.RegisterAssemblyTypes(typeof(CategoryService).Assembly)
+                   .Where(t => t.Name.EndsWith("Service"))
+                   .AsImplementedInterfaces().InstancePerRequest();
 
-            var containerBuilder = builder.Build();
+           var containerBuilder = builder.Build();
 
             //MVC resolver
             DependencyResolver.SetResolver(new AutofacDependencyResolver(containerBuilder));

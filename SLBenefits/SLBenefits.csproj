@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\api\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -204,10 +205,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\App.js" />
-    <Content Include="App\Controllers\DashboardController.js" />
-    <Content Include="App\Directives\CustomDirectives.js" />
+    <Content Include="App\Controllers\categoryController.js" />
+    <Content Include="App\Controllers\dashboardController.js" />
+    <Content Include="App\Directives\customDirectives.js" />
     <Content Include="App\Directives\templates\my-customer.html" />
     <Content Include="App\Directives\templates\true-false-question.html" />
+    <Content Include="App\Views\category.html" />
     <Content Include="App\Views\dashboard.html" />
     <Content Include="Content\angular-ui-switch.css" />
     <Content Include="Content\bootstrap-theme.css" />
